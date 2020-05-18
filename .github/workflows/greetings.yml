@@ -8,5 +8,4 @@ jobs:
   greeting:
     runs-on: ubuntu-latest
     steps:
-      - name: Get color
-        run: echo 'Hello'
+      run: echo 'Hello'
