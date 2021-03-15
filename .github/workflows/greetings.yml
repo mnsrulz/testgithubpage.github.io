@@ -5,8 +5,11 @@ on:
     - cron: "* * * * *"
 
 jobs:
-  greeting:
+  deployment:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Hello'
-        name: HelloTestEcho
+    - name: Deploy Stage
+      uses: fjogeleit/http-request-action@master
+      with:
+        url: ${{ secrets.curl1 }}
+        method: 'POST'
